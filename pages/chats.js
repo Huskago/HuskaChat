@@ -19,6 +19,10 @@ export default function Chats() {
   const router = useRouter()
 
   useEffect(() => {
+    document.title = "HuskaChat | Chats"
+  });
+
+  useEffect(() => {
     if (typeof document !== null) {
       setShowChat(true)
     }
