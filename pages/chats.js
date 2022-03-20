@@ -12,7 +12,6 @@ const MessageFormSocial = dynamic(() =>
   import("react-chat-engine").then((module) => module.MessageFormSocial)
 );
 
-
 export default function Chats() {
   const { username, secret } = useContext(Context)
   const [ showChat, setShowChat ] = useState(false)
