@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useEffect, useContext } from "react";
 
 import { Context } from '../context';
 
@@ -10,6 +10,10 @@ export default function Auth() {
   const { username, secret, setUsername, setSecret } = useContext(Context);
 
   const router = useRouter()
+
+  useEffect(() => {
+    document.title = "HuskaChat | Auth"
+  });
 
   function onSubmit(e) {
     e.preventDefault()
