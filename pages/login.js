@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 
 import dotenv from "dotenv";
+dotenv.config()
 
 export default function Auth() {
   const { username, secret, email,  setUsername, setEmail, setSecret } = useContext(Context);
