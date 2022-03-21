@@ -43,6 +43,7 @@ export default function Chats() {
           userName={ username }
           userSecret={ secret }
           renderNewMessageForm={ () => <MessageFormSocial /> }
+          offset={ 1 }
         />
       </div>
     </div>
