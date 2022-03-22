@@ -13,7 +13,7 @@ const MessageFormSocial = dynamic(() =>
 );
 
 export default function Chats() {
-  const { username, secret, projectId } = useContext(Context)
+  const { username, secret } = useContext(Context)
   const [ showChat, setShowChat ] = useState(false)
   const router = useRouter()
 
@@ -38,7 +38,7 @@ export default function Chats() {
       <div className="shadow">
         <ChatEngine
           height='calc(100vh - 200px)'
-          projectID={ projectId }
+          projectID={ process.env.NEXT_PUBLIC_PROJECT_ID }
           userName={ username }
           userSecret={ secret }
           renderNewMessageForm={ () => <MessageFormSocial /> }
