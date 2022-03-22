@@ -7,8 +7,6 @@ export const ContextProvider = (props) => {
     const [ email, setEmail ] = useState('');
     const [ secret, setSecret ] = useState('');
     const [ confirmSecret, setConfirmSecret ] = useState('');
-    const projectId = process.env.PROJECT_ID;
-    const privateKey = process.env.PRIVATE_KEY;
     
     const value = {
         username,
