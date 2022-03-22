@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 
 export default function Auth() {
-  const { username, email, secret, confirmSecret, setUsername, setEmail, setSecret, setConfirmSecret, privateKey } = useContext(Context);
+  const { username, email, secret, confirmSecret, setUsername, setEmail, setSecret, setConfirmSecret } = useContext(Context);
 
   const router = useRouter()
 
@@ -25,7 +25,7 @@ export default function Auth() {
     axios({
       method: 'post',
       url: 'https://api.chatengine.io/users/',
-      headers: { 'Private-key': privateKey },
+      headers: { 'Private-key': process.env.NEXT_PUBLIC_PRIVATE_KEY },
       data: {
         username: username,
         secret: secret,
