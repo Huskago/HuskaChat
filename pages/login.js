@@ -6,9 +6,6 @@ import { useRouter } from 'next/router';
 
 import axios from 'axios';
 
-import dotenv from "dotenv";
-dotenv.config()
-
 export default function Auth() {
   const { username, secret, email,  setUsername, setEmail, setSecret } = useContext(Context);
 
@@ -28,7 +25,7 @@ export default function Auth() {
       method: 'get',
       url: 'https://api.chatengine.io/users/me/',
       headers: {
-        'Project-ID': process.env.PROJECT_ID,
+        'Project-ID': process.env.NEXT_PUBLIC_PROJECT_ID,
         'User-Name': username,
         'User-Secret': secret
      }
