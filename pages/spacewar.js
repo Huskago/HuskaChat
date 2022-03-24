@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 
+import { Context } from '../context';
+
 export default function SpaceWar() {
 
   useEffect(() => {
