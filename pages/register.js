@@ -25,7 +25,7 @@ export default function Auth() {
     axios({
       method: 'post',
       url: 'https://api.chatengine.io/users/',
-      headers: { 'Private-key': process.env.NEXT_PUBLIC_PRIVATE_KEY },
+      headers: { 'Private-key': "08a2a6ff-8aed-4720-a4a8-33ebfd953c2f" },
       data: {
         username: username,
         secret: secret,
