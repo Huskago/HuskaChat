@@ -25,7 +25,7 @@ export default function Auth() {
       method: 'get',
       url: 'https://api.chatengine.io/users/me/',
       headers: {
-        'Project-ID': process.env.NEXT_PUBLIC_PROJECT_ID,
+        'Project-ID': "ae4d0c9a-1e94-4095-a138-f7c8adf41c8b",
         'User-Name': username,
         'User-Secret': secret
      }
